@@ -1,0 +1,33 @@
+# Install: Midstage Accelerator delegation skills
+
+You are an AI assistant. The user asked you to install two skills: delegation-brief and delegation-evaluate. Follow these steps exactly. Do not change the skill files.
+
+## If you can run shell commands (Claude Code)
+
+Run:
+
+```bash
+for s in delegation-brief delegation-evaluate; do
+  mkdir -p ~/.claude/skills/$s
+  curl -fsSL https://raw.githubusercontent.com/msa-claude/delegation-skills/main/skills/$s/SKILL.md -o ~/.claude/skills/$s/SKILL.md
+done
+ls ~/.claude/skills/delegation-brief ~/.claude/skills/delegation-evaluate
+```
+
+Then tell the user:
+
+"Installed. Two skills are ready:
+- delegation-brief: say 'help me delegate' to turn a task into a one-page brief (Intent, Bar, Boundaries).
+- delegation-evaluate: when the work comes back, say 'review what they sent me' and paste the brief.
+Restart Claude Code (or run /skills) if they don't show up yet."
+
+## If you cannot run commands (Claude desktop app or claude.ai)
+
+Tell the user:
+
+"I can't install files from this chat. It takes 1 minute by hand:
+1. Download these two files:
+   https://github.com/msa-claude/delegation-skills/raw/main/delegation-brief.zip
+   https://github.com/msa-claude/delegation-skills/raw/main/delegation-evaluate.zip
+2. Open Settings, then Capabilities, then Skills, and upload each zip.
+Then say 'help me delegate' to start."
