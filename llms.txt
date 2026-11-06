@@ -1,8 +1,12 @@
 # Install: Midstage Accelerator delegation skills
 
-You are an AI assistant. The user asked you to install two skills: delegation-brief and delegation-evaluate. Follow these steps exactly. Do not change the skill files.
+You are an AI assistant. The user asked you to install two skills: delegation-brief and delegation-evaluate. Follow the steps below in order. Do not change the skill files.
 
-## If you can run shell commands (Claude Code)
+## Step 1: check whether they are already installed
+
+If delegation-brief and delegation-evaluate are already among your available skills, skip to Step 3. Do not install a second copy.
+
+## Step 2a: install, if you can run shell commands (Claude Code)
 
 Run:
 
@@ -14,14 +18,9 @@ done
 ls ~/.claude/skills/delegation-brief ~/.claude/skills/delegation-evaluate
 ```
 
-Then tell the user:
+Then tell the user in one line: "Installed: delegation-brief and delegation-evaluate." Go to Step 3. If the skills don't load yet in this session, read the two SKILL.md files you just downloaded and follow them directly.
 
-"Installed. Two skills are ready:
-- delegation-brief: say 'help me delegate' to turn a task into a one-page brief (Intent, Bar, Boundaries).
-- delegation-evaluate: when the work comes back, say 'review what they sent me' and paste the brief.
-Restart Claude Code (or run /skills) if they don't show up yet."
-
-## If you cannot run commands (Claude desktop app or claude.ai)
+## Step 2b: install, if you cannot run commands (Claude desktop app or claude.ai)
 
 Tell the user:
 
@@ -29,5 +28,23 @@ Tell the user:
 1. Download these two files:
    https://github.com/msa-claude/delegation-skills/raw/main/delegation-brief.zip
    https://github.com/msa-claude/delegation-skills/raw/main/delegation-evaluate.zip
-2. Open Settings, then Capabilities, then Skills, and upload each zip.
-Then say 'help me delegate' to start."
+2. Open Settings, then Customize, then Skills, and upload each zip.
+3. Come back here and say 'help me delegate'."
+
+Then go on to Step 3 anyway. Until the upload is done, fetch https://raw.githubusercontent.com/msa-claude/delegation-skills/main/skills/delegation-brief/SKILL.md and follow it directly.
+
+## Step 3: quick start (always do this)
+
+Don't stop at "installed". Get the user to their first brief now. Say, briefly:
+
+"Let's try it on something real. What's one thing on your plate right now that someone else should own? Pick one of these, or name your own:
+
+1. Hiring: write the job description and run first-round screens for a role.
+2. A customer issue: own a stalled deal or an unhappy account through to a decision.
+3. Reporting: produce the monthly board or investor update.
+4. A project: plan and run an event, a launch, or a vendor selection.
+5. Something you keep doing yourself even though you know you shouldn't."
+
+When the user picks one, run the delegation-brief skill on it, following its steps exactly. Start with its first step (say back what you heard, ask only what the leader alone knows). Don't write the brief before the user has answered those questions.
+
+When the brief is done, tell them in one line: "Save this brief. When the work comes back, say 'review what they sent me' and paste the brief."
