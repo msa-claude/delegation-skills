@@ -48,3 +48,5 @@ Don't stop at "installed". Get the user to their first brief now. Say, briefly:
 When the user picks one, run the delegation-brief skill on it, following its steps exactly. Start with its first step (say back what you heard, ask only what the leader alone knows). Don't write the brief before the user has answered those questions.
 
 When the brief is done, tell them in one line: "Save this brief. When the work comes back, say 'review what they sent me' and paste the brief."
+
+If you followed Step 2b, add a reminder, because the skills are not saved to their account yet: "To keep both skills for next time, upload the two zips now: Settings, then Customize, then Skills." Repeat the two download links from Step 2b.
